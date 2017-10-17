@@ -1,16 +1,17 @@
 package de.midshing;
 
-import java.util.Random;
+import de.midshing.project.Project;
+import de.midshing.ticket.Ticket;
+import de.midshing.worklog.Worklog;
+import org.apache.commons.lang.RandomStringUtils;
+
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
-import org.apache.commons.lang.RandomStringUtils;
-import de.midshing.project.Project;
-import de.midshing.ticket.Ticket;
-import de.midshing.worklog.Worklog;
+import java.util.Random;
 
 @Singleton
 @Startup

@@ -1,13 +1,14 @@
 package de.midshing.project.lazy;
 
-import java.util.List;
-import java.util.Set;
-import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import de.midshing.project.Project;
 import de.midshing.ticket.Ticket;
 import de.midshing.worklog.Worklog;
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import java.util.List;
+import java.util.Set;
 
 @Stateless
 public class ProjectRepositoryLazy {

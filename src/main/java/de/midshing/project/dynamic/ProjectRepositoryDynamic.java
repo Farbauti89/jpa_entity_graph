@@ -1,14 +1,15 @@
 package de.midshing.project.dynamic;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import de.midshing.project.Project;
+
 import javax.ejb.Stateless;
 import javax.persistence.EntityGraph;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-import de.midshing.project.Project;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Stateless
 public class ProjectRepositoryDynamic {

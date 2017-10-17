@@ -1,11 +1,12 @@
 package de.midshing.project.error;
 
-import java.util.List;
+import de.midshing.project.Project;
+
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-import de.midshing.project.Project;
+import java.util.List;
 
 @Stateless
 public class ProjectRepository {
