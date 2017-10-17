@@ -21,7 +21,7 @@ public class ProjectRepositoryDynamic {
     public List<Project> getAll(EntityGraph<Project> entityGraph) {
 
         Query query = em.createQuery(
-                "SELECT p from Project p LEFT join p.tickets as t left join t.worklogs as w ORDER BY p.id asc");
+                "SELECT distinct p from Project p");
         query.setHint(JAVAX_PERSISTENCE_LOADGRAPH, entityGraph);
 
         return query.getResultList();
