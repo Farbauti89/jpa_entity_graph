@@ -9,7 +9,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 import de.midshing.project.Project;
 
-@Path("project/error")
+@Path("projects/error")
 public class ProjectResource {
 
     @Inject

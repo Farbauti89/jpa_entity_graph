@@ -9,7 +9,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 import de.midshing.project.Project;
 
-@Path("project/lazy")
+@Path("projects/lazy")
 public class ProjectResourceLazy {
 
     @Inject
