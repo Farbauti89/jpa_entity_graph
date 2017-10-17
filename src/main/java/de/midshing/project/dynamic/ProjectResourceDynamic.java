@@ -23,9 +23,11 @@ public class ProjectResourceDynamic {
     public Response getProjects() {
 
         EntityGraph<Project> graph = getProjectEntityGraph();
-        List<Project> projects = projectRepositoryDynamic.getAllPreloaded(graph);
+        List<Project> projects = projectRepositoryDynamic.getAll(graph);
+
         return Response.ok(projects).build();
     }
+
     private EntityGraph<Project> getProjectEntityGraph() {
         EntityGraph<Project> graph = projectRepositoryDynamic.getEntityManager().createEntityGraph(Project.class);
         Subgraph<Ticket> ticketSubgraph = graph.addSubgraph("tickets");
@@ -39,7 +41,7 @@ public class ProjectResourceDynamic {
     @Produces("application/json")
     public Response getProject(@PathParam("projectId") long projectId) {
         EntityGraph<Project> graph = getProjectEntityGraph();
-        Project project = projectRepositoryDynamic.getPreloaded(projectId, graph);
+        Project project = projectRepositoryDynamic.get(projectId, graph);
         return Response.ok(project).build();
     }
 }

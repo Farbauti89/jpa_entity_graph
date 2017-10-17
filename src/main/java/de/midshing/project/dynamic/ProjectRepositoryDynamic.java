@@ -18,7 +18,7 @@ public class ProjectRepositoryDynamic {
     @PersistenceContext
     EntityManager em;
 
-    public List<Project> getAllPreloaded(EntityGraph<Project> entityGraph) {
+    public List<Project> getAll(EntityGraph<Project> entityGraph) {
 
         Query query = em.createQuery(
                 "SELECT p from Project p LEFT join p.tickets as t left join t.worklogs as w ORDER BY p.id asc");
@@ -27,7 +27,7 @@ public class ProjectRepositoryDynamic {
         return query.getResultList();
     }
 
-    public Project getPreloaded(long projectId, EntityGraph<Project> entityGraph) {
+    public Project get(long projectId, EntityGraph<Project> entityGraph) {
 
         Map<String, Object> hints = new HashMap<>();
         hints.put(JAVAX_PERSISTENCE_LOADGRAPH, entityGraph);
